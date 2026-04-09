@@ -1,0 +1,6 @@
+@BattlegroundsHubHS_HostAddress = http://localhost:5218
+
+GET {{BattlegroundsHubHS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
