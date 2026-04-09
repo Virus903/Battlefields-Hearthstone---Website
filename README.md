@@ -1,7 +1,7 @@
 # 🏆 Battlegrounds Hub
 
-**Battlegrounds Hub** — это веб-приложение-справочник по режиму «Поля сражений» Hearthstone. Примерно как Википедия,только тут будет прям всё по этому режиму(одиночному и дуо)
-Проект предоставляет актуальную информацию о героях, миньонах, заклинаниях, аномалиях, аксессуарах и хрономалиях(то есть полную информацию об этом режиме).
+**Battlegrounds Hub** — это веб-приложение-справочник по режиму «Поля сражений» Hearthstone. Примерно как Википедия, только тут будет прям всё по этому режиму (одиночному и дуо).  
+Проект предоставляет актуальную информацию о героях, миньонах, заклинаниях, аномалиях, аксессуарах и хрономалиях (то есть полную информацию об этом режиме).  
 А также более углубленную информацию как правильно играть в этот режим с полезными советами сборками и комбинациями.
 
 ---
@@ -41,95 +41,138 @@
 ## 📁 Структура проекта
 
 BattlegroundsHubHS/
-├── Controllers/ # API контроллеры
-│ ├── HeroesController.cs
-│ ├── MinionsController.cs
-│ ├── SpellsController.cs
-│ ├── QuestsController.cs
-│ ├── RewardsController.cs
-│ ├── AnomaliesController.cs
-│ ├── AccessoriesController.cs
-│ ├── ChronomaliesController.cs
-│ ├── ChronoSpellsController.cs
-│ ├── StatsController.cs
-│ └── ImportController.cs
+├── Controllers/                     # API контроллеры
+│   ├── HeroesController.cs
+│   ├── MinionsController.cs
+│   ├── SpellsController.cs
+│   ├── QuestsController.cs
+│   ├── RewardsController.cs
+│   ├── AnomaliesController.cs
+│   ├── AccessoriesController.cs
+│   ├── ChronomaliesController.cs
+│   ├── ChronoSpellsController.cs
+│   ├── StatsController.cs
+│   └── ImportController.cs
 │
-├── Data/ # Контекст базы данных
-│ └── AppDbContext.cs
+├── Data/                           # Контекст базы данных
+│   └── AppDbContext.cs
 │
-├── Dtos/ # DTO для импорта
-│ ├── BattlegroundsApiResponse.cs
-│ ├── CardDto.cs
-│ └── BattlegroundsDto.cs
+├── Dtos/                           # DTO для импорта
+│   ├── BattlegroundsApiResponse.cs
+│   ├── CardDto.cs
+│   └── BattlegroundsDto.cs
 │
-├── Models/ # Сущности БД
-│ ├── Entities/ # Основные модели
-│ │ ├── Hero.cs
-│ │ ├── Minion.cs
-│ │ ├── Spell.cs
-│ │ ├── Quest.cs
-│ │ ├── Reward.cs
-│ │ ├── Anomaly.cs
-│ │ ├── Accessory.cs
-│ │ ├── Chronomaly.cs
-│ │ ├── ChronoSpell.cs
-│ │ ├── Build.cs
-│ │ └── Tip.cs
-│ └── Enums/ # Перечисления
-│ ├── HeroTier.cs
-│ ├── MinionType.cs
-│ └── CardRarity.cs
+├── Models/                         # Сущности БД
+│   ├── Entities/                   # Основные модели
+│   │   ├── Hero.cs
+│   │   ├── Minion.cs
+│   │   ├── Spell.cs
+│   │   ├── Quest.cs
+│   │   ├── Reward.cs
+│   │   ├── Anomaly.cs
+│   │   ├── Accessory.cs
+│   │   ├── Chronomaly.cs
+│   │   ├── ChronoSpell.cs
+│   │   ├── Build.cs
+│   │   └── Tip.cs
+│   └── Enums/                      # Перечисления
+│       ├── HeroTier.cs
+│       ├── MinionType.cs
+│       └── CardRarity.cs
 │
-├── Services/ # Сервисы
-│ └── DataImporter.cs # Импорт из JSON
+├── Services/                       # Сервисы
+│   └── DataImporter.cs             # Импорт из JSON
 │
-├── wwwroot/ # Статические файлы
-│ └── index.html # Фронтенд приложения
+├── wwwroot/                        # Статические файлы
+│   └── index.html                  # Фронтенд приложения
 │
-├── Program.cs # Точка входа
-├── appsettings.json # Конфигурация
-└── battlegrounds.db # База данных SQLite
+├── Program.cs                      # Точка входа
+├── appsettings.json                # Конфигурация
+└── battlegrounds.db                # База данных SQLite
+
+---
 
 ## 🚀 Установка и запуск
 
 ### Требования
 
-- [Visual Studio 2022/2026](https://visualstudio.microsoft.com/)
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download)
-- [Git](https://git-scm.com/)
+- Visual Studio 2022/2026
+- .NET 8.0 SDK
+- Git
 
 ### Инструкция
 
-1. **Клонировать репозиторий**
-git clone https://github.com/Virus903/Battlegrounds-HS-Hub.git
-cd Battlegrounds-HS-Hub
+1. Клонировать репозиторий
 
-2. **Открыть проект в Visual Studio**
-Дважды кликнуть по BattlegroundsHubHS.sln
+   git clone https://github.com/Virus903/Battlegrounds-HS-Hub.git
+   cd Battlegrounds-HS-Hub
 
-3.  **Восстановить пакеты NuGet**
-dotnet restore
+2. Открыть проект в Visual Studio
 
-4. **Применить миграции (создать БД)**
-(1)dotnet ef database update
+   Дважды кликнуть по BattlegroundsHubHS.sln
 
-(2)Или в консоли диспетчера пакетов Visual Studio:
-powershell
-Update-Database
+3. Восстановить пакеты NuGet
 
-5. **Запустить проект**
-(1)Нажать F5 в Visual Studio
+   dotnet restore
 
-(2)Или выполнить в терминале:
-dotnet run
+4. Применить миграции (создать БД)
 
-6. **Открыть в браузере**
+   Способ 1 — через терминал:
+   dotnet ef database update
 
-(1) При запуске откроется API документация: https://localhost:7272/swagger
+   Способ 2 — через консоль диспетчера пакетов Visual Studio:
+   Update-Database
 
-(2) Главная страница: https://localhost:7272/index.html
-https://localhost:7272/ - ссылка на сам сайт,чтоб посмотреть html страницу
-Эти ссылки надо открывать после открытися API документации.
+5. Запустить проект
+
+   Способ 1 — через Visual Studio: нажать F5
+   Способ 2 — через терминал: dotnet run
+
+6. Открыть в браузере
+
+   - API документация: https://localhost:7272/swagger
+   - Главная страница: https://localhost:7272/index.html
+   - Или просто: https://localhost:7272/
+
+   Важно: эти ссылки надо открывать после открытия API документации.
+
+---
+
+## 📡 API эндпоинты
+
+| Метод | Эндпоинт | Описание |
+|-------|----------|----------|
+| GET | /api/Heroes | Получить всех героев |
+| GET | /api/Heroes/{id} | Получить героя по ID |
+| GET | /api/Heroes/tier/{tier} | Фильтр героев по рейтингу |
+| GET | /api/Heroes/search/{query} | Поиск героев по названию |
+| GET | /api/Minions | Получить всех миньонов |
+| GET | /api/Minions/tier/{tier} | Фильтр по уровню таверны |
+| GET | /api/Minions/type/{type} | Фильтр по типу миньона |
+| GET | /api/Minions/filter | Комбинированный фильтр |
+| GET | /api/Minions/search/{query} | Поиск миньонов |
+| GET | /api/Spells | Получить все заклинания |
+| GET | /api/Spells/tier/{tier} | Фильтр заклинаний |
+| GET | /api/Quests | Получить все задания |
+| GET | /api/Rewards | Получить все награды |
+| GET | /api/Anomalies | Получить все аномалии |
+| GET | /api/Accessories | Получить все аксессуары |
+| GET | /api/Chronomalies | Получить все хрономалии |
+| GET | /api/Chronomalies/tier/{tier} | Фильтр хрономалий |
+| GET | /api/ChronoSpells | Получить хрон. заклинания |
+| GET | /api/Stats | Общая статистика по картам |
+| POST | /api/Import/run | Импорт данных из JSON |
+
+---
+
+## 📥 Импорт данных
+
+Данные импортируются из официального API Blizzard:
+
+1. API возвращает JSON со всеми картами Battlegrounds
+2. DataImporter парсит JSON и распределяет карты по таблицам
+3. Импорт запускается через POST запрос на /api/Import/run
+
+Файл с данными: Data/battlegrounds_cards.json
 
 
-   
