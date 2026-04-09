@@ -40,55 +40,49 @@
 
 ## 📁 Структура проекта
 
-BattlegroundsHubHS/
-├── Controllers/                         # API контроллеры
-│   ├── HeroesController.cs
-│   ├── MinionsController.cs
-│   ├── SpellsController.cs
-│   ├── QuestsController.cs
-│   ├── RewardsController.cs
-│   ├── AnomaliesController.cs
-│   ├── AccessoriesController.cs
-│   ├── ChronomaliesController.cs
-│   ├── ChronoSpellsController.cs
-│   ├── StatsController.cs
-│   └── ImportController.cs
-│
-├── Data/                               # Контекст базы данных
-│   └── AppDbContext.cs
-│
-├── Dtos/                               # DTO для импорта из API
-│   ├── BattlegroundsApiResponse.cs
-│   ├── CardDto.cs
-│   └── BattlegroundsDto.cs
-│
-├── Models/                             # Сущности базы данных
-│   ├── Entities/                       # Основные модели
-│   │   ├── Hero.cs
-│   │   ├── Minion.cs
-│   │   ├── Spell.cs
-│   │   ├── Quest.cs
-│   │   ├── Reward.cs
-│   │   ├── Anomaly.cs
-│   │   ├── Accessory.cs
-│   │   ├── Chronomaly.cs
-│   │   ├── ChronoSpell.cs
-│   │   ├── Build.cs
-│   │   └── Tip.cs
-│   └── Enums/                          # Перечисления
-│       ├── HeroTier.cs
-│       ├── MinionType.cs
-│       └── CardRarity.cs
-│
-├── Services/                           # Сервисы
-│   └── DataImporter.cs                 # Импорт из JSON
-│
-├── wwwroot/                            # Статические файлы
-│   └── index.html                      # Фронтенд приложения
-│
-├── Program.cs                          # Точка входа
-├── appsettings.json                    # Конфигурация
-└── battlegrounds.db                    # База данных SQLite
+- **BattlegroundsHubHS/**
+  - **Controllers/** - API контроллеры
+    - HeroesController.cs
+    - MinionsController.cs
+    - SpellsController.cs
+    - QuestsController.cs
+    - RewardsController.cs
+    - AnomaliesController.cs
+    - AccessoriesController.cs
+    - ChronomaliesController.cs
+    - ChronoSpellsController.cs
+    - StatsController.cs
+    - ImportController.cs
+  - **Data/** - Контекст базы данных
+    - AppDbContext.cs
+  - **Dtos/** - DTO для импорта из API
+    - BattlegroundsApiResponse.cs
+    - CardDto.cs
+    - BattlegroundsDto.cs
+  - **Models/** - Сущности базы данных
+    - **Entities/** - Основные модели
+      - Hero.cs
+      - Minion.cs
+      - Spell.cs
+      - Quest.cs
+      - Reward.cs
+      - Anomaly.cs
+      - Accessory.cs
+      - Chronomaly.cs
+      - ChronoSpell.cs
+      - Build.cs
+      - Tip.cs
+    - **Enums/** - Перечисления
+      - HeroTier.cs
+      - MinionType.cs
+      - CardRarity.cs
+  - **Services/** - Сервисы
+    - DataImporter.cs (импорт из JSON)
+  - **wwwroot/** - Статические файлы
+    - index.html (фронтенд приложения)
+  - Program.cs (точка входа)
+  - appsettings.json (конфигурация)
+  - battlegrounds.db (база данных SQLite)
 
 ---
 
