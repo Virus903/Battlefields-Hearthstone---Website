@@ -41,7 +41,8 @@
 ## 📁 Структура проекта
 
 BattlegroundsHubHS/
-├── Controllers/                     # API контроллеры
+│
+├── Controllers/                         # API контроллеры
 │   ├── HeroesController.cs
 │   ├── MinionsController.cs
 │   ├── SpellsController.cs
@@ -54,16 +55,16 @@ BattlegroundsHubHS/
 │   ├── StatsController.cs
 │   └── ImportController.cs
 │
-├── Data/                           # Контекст базы данных
+├── Data/                               # Контекст базы данных
 │   └── AppDbContext.cs
 │
-├── Dtos/                           # DTO для импорта
+├── Dtos/                               # DTO для импорта из API
 │   ├── BattlegroundsApiResponse.cs
 │   ├── CardDto.cs
 │   └── BattlegroundsDto.cs
 │
-├── Models/                         # Сущности БД
-│   ├── Entities/                   # Основные модели
+├── Models/                             # Сущности базы данных
+│   ├── Entities/                       # Основные модели
 │   │   ├── Hero.cs
 │   │   ├── Minion.cs
 │   │   ├── Spell.cs
@@ -75,20 +76,20 @@ BattlegroundsHubHS/
 │   │   ├── ChronoSpell.cs
 │   │   ├── Build.cs
 │   │   └── Tip.cs
-│   └── Enums/                      # Перечисления
+│   └── Enums/                          # Перечисления
 │       ├── HeroTier.cs
 │       ├── MinionType.cs
 │       └── CardRarity.cs
 │
-├── Services/                       # Сервисы
-│   └── DataImporter.cs             # Импорт из JSON
+├── Services/                           # Сервисы
+│   └── DataImporter.cs                 # Импорт из JSON
 │
-├── wwwroot/                        # Статические файлы
-│   └── index.html                  # Фронтенд приложения
+├── wwwroot/                            # Статические файлы
+│   └── index.html                      # Фронтенд приложения
 │
-├── Program.cs                      # Точка входа
-├── appsettings.json                # Конфигурация
-└── battlegrounds.db                # База данных SQLite
+├── Program.cs                          # Точка входа
+├── appsettings.json                    # Конфигурация
+└── battlegrounds.db                    # База данных SQLite
 
 ---
 
