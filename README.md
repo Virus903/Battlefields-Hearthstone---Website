@@ -108,7 +108,6 @@ cd Battlegrounds-HS-Hub
 Дважды кликнуть по BattlegroundsHubHS.sln
 
 3.  **Восстановить пакеты NuGet**
-bash
 dotnet restore
 
 4. **Применить миграции (создать БД)**
