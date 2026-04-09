@@ -41,7 +41,6 @@
 ## 📁 Структура проекта
 
 BattlegroundsHubHS/
-│
 ├── Controllers/                         # API контроллеры
 │   ├── HeroesController.cs
 │   ├── MinionsController.cs
